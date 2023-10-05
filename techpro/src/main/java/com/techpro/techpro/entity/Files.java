@@ -23,4 +23,8 @@ public class Files {
 
     @Lob
     private byte[] imageData;
+
+    @ManyToOne
+    @JoinColumn(name = "player_id", nullable = true)
+    private Player player;
 }

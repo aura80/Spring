@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "players")
 @Data
@@ -30,4 +32,7 @@ public class Player {
 //    @Enumerated(EnumType.STRING)
     @Column(name = "country", length = 30, nullable = false)
     private CountryEnum country;
+
+    @OneToMany(mappedBy = "player")
+    private List<Files> filesList;
 }

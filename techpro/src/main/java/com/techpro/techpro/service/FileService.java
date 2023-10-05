@@ -30,7 +30,7 @@ public class FileService {
         files = imageRepository.save(files);
 
         if (files.getId() != null) {
-            storeMessage = "File uploaded successfully into DB";
+            storeMessage = "File " + file.getOriginalFilename() + " uploaded successfully into DB";
         }
 
         return storeMessage;
