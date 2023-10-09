@@ -22,14 +22,14 @@ public class Player {
     @Column(name = "name")
     private String name;
 
-//    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     @Column(name = "league", length = 30, nullable = false)
     private LeagueEnum league;
 
     @Column(name = "email")
     private String email;
 
-//    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     @Column(name = "country", length = 30, nullable = false)
     private CountryEnum country;
 
