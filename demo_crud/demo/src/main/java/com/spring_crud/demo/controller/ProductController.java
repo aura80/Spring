@@ -5,6 +5,7 @@ import com.spring_crud.demo.service.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -12,6 +13,11 @@ public class ProductController {
 
     @Autowired
     private ProductServiceImpl productService;
+
+    @GetMapping("/")
+    public String getMessage(Principal principal) {
+        return "Hello " + principal.getName() + " , I'm a message!";
+    }
 
     @PostMapping("/addProduct")
     public Product addProduct(@RequestBody Product product) {
