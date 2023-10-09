@@ -21,7 +21,7 @@ public class SecurityConfig {
     @Order(1)
     SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
-                .authorizeHttpRequests(auth -> {                        // to configure Spring security
+                .authorizeHttpRequests(auth -> {                            // to configure Spring security
                     auth.requestMatchers("/").permitAll();
                     auth.anyRequest().authenticated();
                 })
